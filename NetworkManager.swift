@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetworkManager{
+struct NetworkManager { 
     
     func fetchInfo() {
         
