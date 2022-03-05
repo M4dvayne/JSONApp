@@ -20,31 +20,32 @@ class MainViewController: UIViewController {
     @IBOutlet weak var stateAbbreviationLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     
+    @IBOutlet weak var labelsStack: UIStackView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getInfoButton.layer.cornerRadius = 10
+        labelsStack.layer.cornerRadius = 10
     
-    let networkManager = NetworkManager()
+    }
     
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//    }
-
-
     @IBAction func getInfoButtonPressed(_ sender: Any) {
         
-        networkManager.fetchInfo()
-        
+        NetworkManager.shared.fetchInfo { zip in
+            
+            self.postCodeLabel.text = zip.postCode
+            self.countryLabel.text = zip.country
+            self.countryAbbreviationLabel.text = zip.countryAbbreviation
+            /*
+             Здесь ниже, я не смог извлечь данные из вложенного в ZipCode массива [Places], пытался привести к string, и скастить, но что-то не вышло, знаю что так нельзя, буду прорабатывать такие моменты, но в то же время очень смутило каким образом через first получилось добраться до вложенных элементов.
+             */
+            self.placeName.text = zip.places?.first?.placeName
+            self.longitudeLabel.text = zip.places?.first?.longitude
+            self.stateLabel.text = zip.places?.first?.state
+            self.stateAbbreviationLabel.text = zip.places?.first?.stateAbbreviation
+            self.latitudeLabel.text = zip.places?.first?.latitude
+            
+        }
     }
 }
-
-//extension MainViewController {
-//
-//    func configureLabels(with zipCode: ZipCode) {
-//        DispatchQueue.main.async {
-//            self.postCodeLabel.text = zipCode.postCode
-//            self.countryLabel.text = zipCode.country
-//            self.countryAbbreviationLabel.text = zipCode.countryAbbreviation
-//        }
-//    }
-//}

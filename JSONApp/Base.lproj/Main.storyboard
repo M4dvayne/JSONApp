@@ -98,6 +98,7 @@
                         <outlet property="countryAbbreviationLabel" destination="g05-H2-QHK" id="hfX-f8-pl2"/>
                         <outlet property="countryLabel" destination="NdD-5s-RD7" id="v9G-o0-Acq"/>
                         <outlet property="getInfoButton" destination="UMt-w4-uf4" id="5PW-HZ-hPc"/>
+                        <outlet property="labelsStack" destination="2ZK-ub-uli" id="8zp-lG-tdv"/>
                         <outlet property="latitudeLabel" destination="wq5-dr-Htu" id="4V3-hJ-Imy"/>
                         <outlet property="longitudeLabel" destination="P8z-eT-rdt" id="Ub3-HC-jVw"/>
                         <outlet property="placeName" destination="Sdp-61-arP" id="Qk5-NE-aVV"/>

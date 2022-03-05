@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct NetworkManager { 
+struct NetworkManager {
+
+    static let shared = NetworkManager()
     
-    func fetchInfo() {
+    private init() {}
+    
+    func fetchInfo(with completion: @escaping (ZipCode) -> Void) {
         
         guard let url = URL(string: Link.json.rawValue) else {return}
         
@@ -20,13 +24,17 @@ struct NetworkManager {
             }
             do {
                 let zip = try JSONDecoder().decode(ZipCode.self, from: data)
-                //               DispatchQueue.main.async {
-                //                   
-                //               }
-                print(zip)
+                DispatchQueue.main.async {
+                    completion(zip)
+                }
+
             } catch let error {
                 print(error.localizedDescription)
             }
         }.resume()
     }
 }
+
+
+
+

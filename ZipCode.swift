@@ -5,7 +5,6 @@
 //  Created by Вячеслав Кремнев on 03.03.2022.
 //
 
-
 struct ZipCode: Decodable {
     
     let postCode: String?
@@ -22,11 +21,11 @@ struct ZipCode: Decodable {
 }
 
 struct Place: Decodable {
-    let placeName: String
-    let longitude: String
-    let state: String
-    let stateAbbreviation: String
-    let latitude: String
+    let placeName: String?
+    let longitude: String?
+    let state: String?
+    let stateAbbreviation: String?
+    let latitude: String?
 
     enum CodingKeys: String, CodingKey {
         case placeName = "place name"
