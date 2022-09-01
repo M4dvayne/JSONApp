@@ -11,7 +11,7 @@ struct ZipCode: Decodable {
     let country: String?
     let countryAbbreviation: String?
     let places: [Place]?
-
+    
     enum CodingKeys: String, CodingKey {
         case postCode = "post code"
         case country
@@ -26,7 +26,7 @@ struct Place: Decodable {
     let state: String?
     let stateAbbreviation: String?
     let latitude: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case placeName = "place name"
         case longitude, state

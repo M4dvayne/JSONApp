@@ -8,7 +8,7 @@
 import Foundation
 
 struct NetworkManager {
-
+    
     static let shared = NetworkManager()
     
     private init() {}
@@ -26,8 +26,9 @@ struct NetworkManager {
                 let zip = try JSONDecoder().decode(ZipCode.self, from: data)
                 DispatchQueue.main.async {
                     completion(zip)
+                    print(zip)
                 }
-
+                
             } catch let error {
                 print(error.localizedDescription)
             }

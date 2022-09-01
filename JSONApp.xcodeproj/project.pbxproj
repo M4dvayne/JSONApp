@@ -44,8 +44,6 @@
 		230C4B8D27D159FB00E5EF72 = {
 			isa = PBXGroup;
 			children = (
-				230C4BAD27D15A3E00E5EF72 /* ZipCode.swift */,
-				230C4BAF27D15FCD00E5EF72 /* NetworkManager.swift */,
 				230C4B9827D159FB00E5EF72 /* JSONApp */,
 				230C4B9727D159FB00E5EF72 /* Products */,
 			);
@@ -62,15 +60,65 @@
 		230C4B9827D159FB00E5EF72 /* JSONApp */ = {
 			isa = PBXGroup;
 			children = (
-				230C4B9927D159FB00E5EF72 /* AppDelegate.swift */,
-				230C4B9B27D159FB00E5EF72 /* SceneDelegate.swift */,
-				230C4B9D27D159FB00E5EF72 /* MainViewController.swift */,
-				230C4B9F27D159FB00E5EF72 /* Main.storyboard */,
-				230C4BA227D159FD00E5EF72 /* Assets.xcassets */,
-				230C4BA427D159FD00E5EF72 /* LaunchScreen.storyboard */,
-				230C4BA727D159FD00E5EF72 /* Info.plist */,
+				23FE9B8528C17BDA009E3262 /* App */,
+				23FE9B8428C17BC0009E3262 /* Storyboards */,
+				23FE9B8828C17C19009E3262 /* ViewControllers */,
+				23FE9B8628C17BF1009E3262 /* Model */,
+				23FE9B8728C17BFA009E3262 /* Helpers */,
+				23FE9B8928C17C46009E3262 /* Media */,
 			);
 			path = JSONApp;
+			sourceTree = "<group>";
+		};
+		23FE9B8428C17BC0009E3262 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				230C4B9F27D159FB00E5EF72 /* Main.storyboard */,
+				230C4BA427D159FD00E5EF72 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		23FE9B8528C17BDA009E3262 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				230C4BA727D159FD00E5EF72 /* Info.plist */,
+				230C4B9927D159FB00E5EF72 /* AppDelegate.swift */,
+				230C4B9B27D159FB00E5EF72 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		23FE9B8628C17BF1009E3262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				230C4BAD27D15A3E00E5EF72 /* ZipCode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23FE9B8728C17BFA009E3262 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				230C4BAF27D15FCD00E5EF72 /* NetworkManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		23FE9B8828C17C19009E3262 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				230C4B9D27D159FB00E5EF72 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		23FE9B8928C17C46009E3262 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				230C4BA227D159FD00E5EF72 /* Assets.xcassets */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
